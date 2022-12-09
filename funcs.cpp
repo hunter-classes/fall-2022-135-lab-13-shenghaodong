@@ -4,14 +4,14 @@
 
 //Task A
 std::string printRange(int left, int right){
-    std::string returnVal;
-    if(left < right){
-        returnVal += std::string(right);
-        printrange(left, right - 1);
-    }else{
+    std::string returnVal = "";
+    if (right > left) {
+        std::cout << "test" << std::endl;
+        returnVal += std::to_string(left) + " ";
+        printRange(left + 1, right);
+    }else {
         return returnVal;
     }
-    return returnVal;
 
 }
 
