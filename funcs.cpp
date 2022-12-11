@@ -22,12 +22,9 @@
 //Task B
 int sumRange(int left, int right){
     if(left == right + 1){
-        returnVal = dummyVal;
-        dummyVal = 0;
-        return returnVal;
+        return 0;
     }else{
-        dummyVal += left;
-        return sumRange(left + 1, right);
+        return left + sumRange(left + 1, right);
     }
 }
 
