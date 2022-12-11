@@ -3,25 +3,24 @@
 #include <string>
 #include <iostream>
 
-//Task A
-std::string printRange(int left, int right){
-    static std::string dummyVal;
-    std::string returnVal;
-        if(left == right + 1){
-            returnVal = dummyVal;
-            dummyVal = "";
-            return returnVal;
-        }else{
-            dummyVal += std::to_string(left) + " ";
-            return printRange(left + 1, right);
-        }
+//Don’t use loops, global or static variables.
 
-}
+//Task A
+// std::string printRange(int left, int right){
+//     std::string returnVal;
+//         if(left == right + 1){
+//             returnVal = dummyVal;
+//             dummyVal = "";
+//             return returnVal;
+//         }else{
+//             dummyVal += std::to_string(left) + " ";
+//             return printRange(left + 1, right);
+//         }
+
+// }
 
 //Task B
 int sumRange(int left, int right){
-    static int dummyVal;
-    int returnVal;
     if(left == right + 1){
         returnVal = dummyVal;
         dummyVal = 0;
