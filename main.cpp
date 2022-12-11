@@ -2,6 +2,6 @@
 #include "funcs.h"
 
 int main(){
-    std::cout << printRange(0, 39) << std::endl;
+    std::cout << printRange(-3, 6) << std::endl;
     return 0;
 }
