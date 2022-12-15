@@ -36,12 +36,27 @@ int sumArray(int *arr, int size){
 //Task D
 bool isAlphanumeric(std::string s){
     if(s.length() == 0){
-        return 0;
+        return true;
     }else{
-        
+        //between 48-57 65-90 97-122
+        int ascii = s[0];
+        if(ascii >= 48 && ascii <= 57 ||ascii >= 65 && ascii <= 90 || ascii >= 97 && ascii <= 122){
+            return isAlphanumeric(s.substr(1, s.length() - 1));
+        }else{
+            return false;
+        }
     }
 }
 
 //Task E
-
-//Task F
+bool nestedParens(std::string s){
+    if(s.length() == 0){
+        return true;
+    }else{
+        if(s.substr(0, 1) == "(" && s.substr(s.length()-1, 1) == ")"){
+            return nestedParens(s.substr(1, s.length() - 2));
+        }else{
+            return false;
+        }
+    }
+}
